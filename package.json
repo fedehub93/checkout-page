@@ -1,0 +1,31 @@
+{
+    "name": "checkout-page",
+    "version": "1.0.0",
+    "description": "Checkout page challenge",
+    "main": "index.js",
+    "scripts": {
+        "watch:sass": "node-sass sass/main.scss css/style.css -w",
+        "compile:sass": "node-sass sass/main.scss css/style.comp.css",
+        "prefix:css": "postcss --use autoprefixer -b 'last versions' css/style.comp.css -o css/style.prefix.css",
+        "compress:css": "node-sass css/style.prefix.css css/style.css --output-style compressed",
+        "build:css": "npm-run-all compile:sass prefix:css compress:css"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/fedehub93/checkout-page.git"
+    },
+    "author": "Federico Verrengia",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/fedehub93/checkout-page/issues"
+    },
+    "homepage": "https://github.com/fedehub93/checkout-page#readme",
+    "devDependencies": {
+        "autoprefixer": "^9.8.6",
+        "node-sass": "^4.14.1",
+        "npm-run-all": "^4.1.5",
+        "postcss": "^8.1.1",
+        "postcss-cli": "^8.0.0"
+    },
+    "browserslist": "last 10 versions"
+}
