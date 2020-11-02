@@ -1,4 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap");
+:root {
+  --color-gray-1: #828282;
+  --color-gray-2: #4e5150;
+  --color-gray-3: #333;
+  --color-orange: #f2994a; }
+
 *,
 *::before,
 *::after {
@@ -12,4 +18,61 @@ html {
 
 body {
   width: 100rem;
-  margin: 0 auto; }
+  margin: 0 auto;
+  padding: 5rem;
+  line-height: 1.4; }
+
+.heading-1, .heading-2, .input-group__label {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600; }
+
+.heading-1 {
+  font-size: 3.6rem;
+  color: var(--color-gray-2); }
+
+.heading-2 {
+  font-size: 1.8rem;
+  color: var(--color-gray-3); }
+
+.u-mb-xsmall {
+  margin-bottom: 1rem; }
+
+.u-mb-small {
+  margin-bottom: 2rem; }
+
+.u-mb-medium {
+  margin-bottom: 4rem; }
+
+.input-group {
+  position: relative; }
+  .input-group:not(:last-child) {
+    margin-bottom: 2rem; }
+  .input-group input,
+  .input-group select {
+    padding: 2rem 6rem;
+    border-radius: 1.5rem;
+    width: 100%;
+    border: 1px solid var(--color-gray-1); }
+    .input-group input::placeholder,
+    .input-group select::placeholder {
+      font-family: "Montserrat", sans-serif;
+      font-size: 1.6rem;
+      color: var(--color-gray-1); }
+  .input-group__label {
+    font-size: 1.2rem;
+    color: var(--color-gray-2);
+    display: block;
+    margin-bottom: 1rem; }
+  .input-group__icon {
+    position: absolute;
+    top: 3.8rem;
+    left: 1rem;
+    height: 3rem;
+    width: 3rem;
+    fill: var(--color-gray-1); }
+
+.checkout {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); }
+  .checkout__info-contact {
+    margin-bottom: 5rem; }

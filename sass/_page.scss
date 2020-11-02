@@ -1,0 +1,13 @@
+.checkout {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    &__info {
+    }
+
+    &__info-contact {
+        margin-bottom: 5rem;
+    }
+
+    &__cart {
+    }
+}

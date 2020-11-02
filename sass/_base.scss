@@ -1,5 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap");
 
+:root {
+    --color-gray-1: #828282;
+    --color-gray-2: #4e5150;
+    --color-gray-3: #333;
+    --color-orange: #f2994a;
+}
+
 *,
 *::before,
 *::after {
@@ -16,4 +23,6 @@ html {
 body {
     width: 100rem;
     margin: 0 auto;
+    padding: 5rem;
+    line-height: 1.4;
 }
