@@ -1,152 +1,180 @@
 //INPUT GROUP
 .input-row {
-    display: flex;
+  display: flex;
 }
 
 .input-group {
-    position: relative;
+  position: relative;
+  width: 100%;
+
+  &:not(:last-child) {
+    margin-bottom: 2rem;
+    margin-right: 2rem;
+  }
+
+  & input[type="text"],
+  & input[type="email"],
+  & input[type="number"],
+  & select {
+    padding: 2rem 0 2rem 6rem;
+    border-radius: 1.5rem;
     width: 100%;
+    border: 1px solid var(--color-gray-1);
+  }
 
-    &:not(:last-child) {
-        margin-bottom: 2rem;
-        margin-right: 2rem;
-    }
+  select,
+  ::placeholder {
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.6rem;
+    color: var(--color-gray-1);
+  }
 
-    & input[type="text"],
-    & input[type="email"],
-    & input[type="number"],
-    & select {
-        padding: 2rem 0 2rem 6rem;
-        border-radius: 1.5rem;
-        width: 100%;
-        border: 1px solid var(--color-gray-1);
-    }
+  &__label {
+    @extend %montserrat-600;
+    font-size: 1.2rem;
+    color: var(--color-gray-2);
+    display: block;
+    margin-bottom: 1rem;
+  }
 
-    select,
-    ::placeholder {
-        font-family: "Montserrat", sans-serif;
-        font-size: 1.6rem;
-        color: var(--color-gray-1);
-    }
-
-    &__label {
-        @extend %montserrat-600;
-        font-size: 1.2rem;
-        color: var(--color-gray-2);
-        display: block;
-        margin-bottom: 1rem;
-    }
-
-    &__icon {
-        position: absolute;
-        top: 3.8rem;
-        left: 1rem;
-        height: 3rem;
-        width: 3rem;
-        fill: var(--color-gray-1);
-    }
-
+  &__icon {
+    position: absolute;
+    top: 3.8rem;
+    left: 1rem;
+    height: 3rem;
+    width: 3rem;
+    fill: var(--color-gray-1);
+  }
 }
 
 .save-info {
-    @extend %montserrat-600;
-    font-size: 1.2rem;
-    color: var(--color-gray-4);
+  @extend %montserrat-600;
+  font-size: 1.2rem;
+  color: var(--color-gray-4);
 }
-
 
 //BUTTON
 .btn {
-    @extend %montserrat-600;
-    display: block;
-    font-size: 1.6rem;
-    color: var(--color-white);
-    padding: 1.7rem 4.5rem;
-    border: none;
-    border-radius: 1.5rem;
-    outline: none;
-    cursor: pointer;
+  @extend %montserrat-600;
+  display: block;
+  font-size: 1.6rem;
+  color: var(--color-white);
+  padding: 1.7rem 4.5rem;
+  border: none;
+  border-radius: 1.5rem;
+  outline: none;
+  cursor: pointer;
 
-    &--orange {
-        background-color: var(--color-orange);
-    }
+  &--orange {
+    background-color: var(--color-orange);
+  }
 }
 
 .btn-quantity {
-    @extend %montserrat-600;
-    font-size: 1.6rem;
-    display: block;
-    padding: 0.5rem 1rem;
-    border-radius: .5rem;
-    color: var(--color-gray-1);
-    background-color: var(--color-gray-6);
+  @extend %montserrat-600;
+  font-size: 1.6rem;
+  display: block;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  color: var(--color-gray-1);
+  background-color: var(--color-gray-6);
 
-    cursor: pointer;
+  cursor: pointer;
 }
 
 //CART
 
 .cart {
-    padding: 2rem 4rem 2rem 2rem;
-    background-color: var(--color-gray-5);
+  padding: 2rem 2rem 2rem 2rem;
+  background-color: var(--color-gray-5);
+  border-radius: 1.5rem;
+
+  &__product {
+    &:not(:nth-last-child(2)) {
+      margin-bottom: 2rem;
+    }
+    &:nth-last-child(2) {
+      margin-bottom: 10rem;
+    }
+
+    padding-right: 4rem;
+
+    display: grid;
+    grid-template-columns: max-content minmax(max-content, 50%);
+    grid-template-rows: max-content 1fr max-content;
+    column-gap: 2rem;
+  }
+
+  &__img {
+    grid-row: 1 / -1;
+    width: 15rem;
+    height: auto;
+    border-radius: 1.5rem;
+  }
+
+  &__name {
+    @extend %montserrat-600;
+    font-size: 1.6rem;
+    color: var(--color-gray-2);
+    margin-bottom: 0.5rem;
+  }
+
+  &__price-box {
+    display: flex;
+    align-items: center;
+  }
+
+  &__price {
+    @extend %montserrat-600;
+    &:not(:last-child) {
+      margin-right: 2rem;
+    }
+    &--discounted {
+      font-size: 1.6rem;
+      color: var(--color-orange);
+    }
+
+    &--total {
+      font-size: 1.2rem;
+      color: var(--color-gray-2);
+    }
+  }
+
+  &__quantity-box {
+    padding: 1rem;
+    border: 1px solid var(--color-gray-1);
     border-radius: 1.5rem;
 
-    &__product {
-        &:not(:nth-last-child(2)) { margin-bottom: 2rem; }
-        &:nth-last-child(2) { margin-bottom: 6rem; }
-        
-        display: grid;
-        grid-template-columns: max-content minmax(max-content, 50%);
-        grid-template-rows: max-content 1fr max-content;
-        column-gap: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__quantity {
+    @extend %montserrat-600;
+    font-size: 1.6rem;
+    color: var(--color-gray-3);
+  }
+
+  &__summury {
+      color: var(--color-gray-3);
+
+      &-shipping,
+      &-total {
+          margin-bottom: 1rem;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+      }
+
+    &-name {
+      @extend %montserrat-600;
+      font-size: 1.8rem;
     }
 
-    &__img {
-        grid-row: 1 / -1;
-        width: 15rem;
-        height: auto;
-        border-radius: 1.5rem;
+    &-price {
+      @extend %montserrat-600;
+      font-size: 1.4rem;
     }
-
-    &__name {
-        @extend %montserrat-600;
-        font-size: 1.6rem;
-        color: var(--color-gray-2);
-        margin-bottom: .5rem;
-    }
-
-    &__price-box {
-        display: flex;
-        align-items: center;
-    }
-
-    &__price {
-        @extend %montserrat-600;
-        &:not(:last-child) { margin-right: 2rem; }
-        &--discounted {
-            font-size: 1.6rem;
-            color: var(--color-orange);
-        }
-
-        &--total {
-            font-size: 1.2rem;
-            color: var(--color-gray-2);
-        }
-    }
-
-    &__quantity-box {
-        padding: 1rem;
-        border: 1px solid var(--color-gray-1);
-        border-radius: 1.5rem;
-
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    &__quantity {
-        @extend %montserrat-600;
-        font-size: 1.6rem;
-        color: var(--color-gray-3)
-    }
+  }
 }
