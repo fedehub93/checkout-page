@@ -26,7 +26,11 @@ body {
   padding: 5rem;
   line-height: 1.4; }
 
-.heading-1, .heading-2, .input-group__label, .save-info, .btn, .btn-quantity, .cart__name, .cart__price, .cart__quantity, .cart__summury-name, .cart__summury-price {
+.heading-1, .heading-2, input[type="text"],
+input[type="email"],
+input[type="number"],
+select,
+::placeholder, .input-group__label, .save-info, .btn, .btn-quantity, .cart__name, .cart__price, .cart__quantity, .cart__summury-name, .cart__summury-price {
   font-family: "Montserrat", sans-serif;
   font-weight: 600; }
 
@@ -50,28 +54,40 @@ body {
 .u-flex-row-reverse {
   flex-direction: row-reverse; }
 
-.input-row {
-  display: flex; }
+input[type="text"],
+input[type="email"],
+input[type="number"],
+select {
+  font-size: 1.6rem;
+  padding: 2rem 0 2rem 6rem;
+  border-radius: 1.5rem;
+  width: 100%;
+  height: 60px;
+  border: 1px solid var(--color-gray-1);
+  outline: none; }
+
+input:focus + .input-group__icon,
+select:focus + .input-group__icon {
+  animation: pulsate .5s infinite; }
+
+@keyframes pulsate {
+  0% {
+    top: 4rem; }
+  50% {
+    top: 3.5rem;
+    box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.2); }
+  100% {
+    top: 4rem; } }
+
+select,
+::placeholder {
+  font-size: 1.6rem;
+  color: var(--color-gray-1); }
 
 .input-group {
   position: relative;
-  width: 100%; }
-  .input-group:not(:last-child) {
-    margin-bottom: 2rem;
-    margin-right: 2rem; }
-  .input-group input[type="text"],
-  .input-group input[type="email"],
-  .input-group input[type="number"],
-  .input-group select {
-    padding: 2rem 0 2rem 6rem;
-    border-radius: 1.5rem;
-    width: 100%;
-    border: 1px solid var(--color-gray-1); }
-  .input-group select,
-  .input-group ::placeholder {
-    font-family: "Montserrat", sans-serif;
-    font-size: 1.6rem;
-    color: var(--color-gray-1); }
+  width: 100%;
+  margin-bottom: 2rem; }
   .input-group__label {
     font-size: 1.2rem;
     color: var(--color-gray-2);
@@ -79,11 +95,20 @@ body {
     margin-bottom: 1rem; }
   .input-group__icon {
     position: absolute;
-    top: 3.8rem;
+    top: 4rem;
     left: 1rem;
     height: 3rem;
     width: 3rem;
-    fill: var(--color-gray-1); }
+    fill: var(--color-gray-1);
+    border-radius: 1rem; }
+
+.input-row {
+  display: flex;
+  margin-bottom: 2rem; }
+
+.input-row .input-group {
+  margin-bottom: 0;
+  margin-right: 2rem; }
 
 .save-info {
   font-size: 1.2rem;
