@@ -21,7 +21,7 @@ html {
   box-sizing: border-box; }
 
 body {
-  width: 100rem;
+  max-width: 120rem;
   margin: 0 auto;
   padding: 5rem;
   line-height: 1.4; }
@@ -107,8 +107,9 @@ select,
   margin-bottom: 2rem; }
 
 .input-row .input-group {
-  margin-bottom: 0;
-  margin-right: 2rem; }
+  margin-bottom: 0; }
+  .input-row .input-group:not(:last-child) {
+    margin-right: 2rem; }
 
 .save-info {
   font-size: 1.2rem;

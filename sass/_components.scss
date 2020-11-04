@@ -68,7 +68,8 @@ select,
 .input-row {
   & .input-group {
     margin-bottom: 0;
-    margin-right: 2rem;
+
+    &:not(:last-child) { margin-right: 2rem; }
   }
 }
 
