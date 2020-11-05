@@ -1,30 +1,15 @@
 //INPUT
-input[type="text"],
-input[type="email"],
-input[type="number"],
-select {
-  @extend %montserrat-600;
-  font-size: 1.6rem;
-  padding: 2rem 0 2rem 6rem;
-  border-radius: 1.5rem;
-  width: 100%;
-  height: 60px;
-  border: 1px solid var(--color-gray-1);
-  outline: none;
-}
-
-input:focus + .input-group__icon,
-select:focus + .input-group__icon {
-  animation: pulsate .5s infinite ; 
-}
-
 @keyframes pulsate {
-  0% {top: 4rem;}
-  50% {
-    top: 3.5rem; 
-    box-shadow: 0 2rem 4rem rgba(0,0,0,0.20);
+  0% {
+    top: 4rem;
   }
-  100% {top: 4rem;}
+  50% {
+    top: 3.5rem;
+    box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.2);
+  }
+  100% {
+    top: 4rem;
+  }
 }
 
 select,
@@ -34,12 +19,30 @@ select,
   color: var(--color-gray-1);
 }
 
-
 //INPUT GROUP
 .input-group {
   position: relative;
   width: 100%;
   margin-bottom: 2rem;
+
+  input[type="text"],
+  input[type="email"],
+  input[type="number"],
+  select {
+    @extend %montserrat-600;
+    font-size: 1.6rem;
+    padding: 2rem 0 2rem 6rem;
+    border-radius: 1.5rem;
+    width: 100%;
+    height: 60px;
+    border: 1px solid var(--color-gray-1);
+    outline: none;
+  }
+
+  input:focus + .input-group__icon,
+  select:focus + .input-group__icon {
+    animation: pulsate 0.5s infinite;
+  }
 
   &__label {
     @extend %montserrat-600;
@@ -69,7 +72,9 @@ select,
   & .input-group {
     margin-bottom: 0;
 
-    &:not(:last-child) { margin-right: 2rem; }
+    &:not(:last-child) {
+      margin-right: 2rem;
+    }
   }
 }
 
@@ -104,7 +109,6 @@ select,
   border-radius: 0.5rem;
   color: var(--color-gray-1);
   background-color: var(--color-gray-6);
-
   cursor: pointer;
 }
 
@@ -162,6 +166,7 @@ select,
 
     &--total {
       font-size: 1.2rem;
+      text-decoration: line-through;
       color: var(--color-gray-2);
     }
   }
@@ -170,6 +175,7 @@ select,
     padding: 1rem;
     border: 1px solid var(--color-gray-1);
     border-radius: 1.5rem;
+    width: 15rem;
 
     display: flex;
     justify-content: space-between;
@@ -182,7 +188,18 @@ select,
     color: var(--color-gray-3);
   }
 
-  &__summury {
+  &__quantity-input {
+    @extend %montserrat-600;
+    text-align: center;
+    font-size: 1.6rem;
+    color: var(--color-gray-3);
+    border: none;
+    background-color: transparent;
+    width: 100%;
+    outline: none;
+  }
+
+  &__summary {
     color: var(--color-gray-3);
 
     &-shipping,

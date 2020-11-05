@@ -182,42 +182,45 @@
             <img src="img/photo1.png" alt="Product 1" class="cart__img" />
             <h3 class="cart__name">Vintage Backbag</h3>
             <div class="cart__price">
-              <span class="cart__price cart__price--discounted">$54.99</span>
-              <span class="cart__price cart__price--total">$94.99</span>
+              <span class="cart__price cart__price--discounted">$<span class="value">54.99</span></span>
+              <span class="cart__price cart__price--total">$<span class="value">94.99</span></span>
             </div>
             <div class="cart__quantity-box">
-              <span class="btn-quantity">&minus;</span>
-              <span class="cart__quantity">1</span>
-              <span class="btn-quantity">&plus;</span>
+              <span class="btn-quantity btn-quantity--minus">&minus;</span>
+              <!-- <span class="cart__quantity">1</span> -->
+              <input type="number" class="cart__quantity-input" min="0" value="1">
+              <span class="btn-quantity btn-quantity--plus">&plus;</span>
             </div>
           </div>
           <div class="cart__product">
             <img src="img/photo2.png" alt="Product 2" class="cart__img" />
             <h3 class="cart__name">Levi Shoes</h3>
             <div class="cart__price-box">
-              <span class="cart__price cart__price--discounted">$74.99</span>
-              <span class="cart__price cart__price--total">$124.99</span>
+              <span class="cart__price cart__price--discounted">$<span class="value">74.99</span></span>
+              <span class="cart__price cart__price--total">$<span class="value">124.99</span></span>
             </div>
             <div class="cart__quantity-box">
-              <span class="btn-quantity">&minus;</span>
-              <span class="cart__quantity">1</span>
-              <span class="btn-quantity">&plus;</span>
+              <span class="btn-quantity btn-quantity--minus">&minus;</span>
+              <!-- <span class="cart__quantity">1</span> -->
+              <input type="number" class="cart__quantity-input" min="0" value="1">
+              <span class="btn-quantity btn-quantity--plus">&plus;</span>
             </div>
           </div>
           <div class="cart__summary">
             <hr class="u-mb-xsmall" />
-            <div class="cart__summury-shipping">
-              <span class="cart__summury-name">Shipping</span>
-              <span class="cart__summury-price">$19</span>
+            <div class="cart__summary-shipping">
+              <span class="cart__summary-name">Shipping</span>
+              <span class="cart__summary-price">$<span class="value">19</span></span>
             </div>
             <hr class="u-mb-xsmall" />
-            <div class="cart__summury-total">
-              <span class="cart__summury-name">Total</span>
-              <span class="cart__summury-price">$148.98</span>
+            <div class="cart__summary-total">
+              <span class="cart__summary-name">Total</span>
+              <span class="cart__summary-price">$<span class="value">148.98</span></span>
             </div>
           </div>
         </div>
       </div>
     </div>
   </body>
+  <script src="js/script.js"></script>
 </html>
