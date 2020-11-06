@@ -156,7 +156,7 @@ select,
   border-radius: 1.5rem;
   outline: none;
   cursor: pointer;
-  transition: all .4s; }
+  transition: all 0.4s; }
   .btn:hover {
     transform: translateY(-3px);
     box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.15); }
@@ -205,6 +205,9 @@ select,
     margin-bottom: auto;
     display: flex;
     align-items: center; }
+  .cart__price::before {
+    content: "$";
+    display: inline-block; }
   .cart__price:not(:last-child) {
     margin-right: 2rem; }
   .cart__price--discounted {
@@ -244,6 +247,9 @@ select,
       font-size: 1.8rem; }
     .cart__summary-price {
       font-size: 1.4rem; }
+      .cart__summary-price::before {
+        content: "$";
+        display: inline-block; }
 
 .alert {
   position: relative;
@@ -260,7 +266,7 @@ select,
     display: block;
     position: absolute;
     right: 1rem;
-    top: .5rem;
+    top: 0.5rem;
     color: var(--color-white);
     cursor: pointer; }
   .alert--success {

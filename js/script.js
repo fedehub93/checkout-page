@@ -1,9 +1,9 @@
 const cartProduct = document.querySelectorAll(".cart__product");
 const cartSummaryEl = document.querySelector(
-  ".cart__summary-total .cart__summary-price .value"
+  ".cart__summary-total .cart__summary-price"
 );
 
-document.querySelector(".alert__close").addEventListener("click", function() {
+document.querySelector(".alert__close").addEventListener("click", function () {
   document.querySelector(".alert").style.visibility = "hidden";
 });
 
@@ -51,14 +51,15 @@ const removeQuantity = function (i) {
 };
 
 const calcTotal = function () {
-  cartSummary = 19;
+  cartSummary = 0;
+  cartShipping = 19;
+  cartSummary = cartSummary + 19;
   for (let i = 0; i < cartProduct.length; i++) {
     const cartQuantity = Number(
       cartProduct[i].querySelector(".cart__quantity-input").value
     );
     const cartPrice = Number(
-      cartProduct[i].querySelector(".cart__price--discounted .value")
-        .textContent
+      cartProduct[i].querySelector(".cart__price--discounted").textContent
     );
     cartSummary = cartSummary + cartQuantity * cartPrice;
     cartSummaryEl.textContent = cartSummary.toFixed(2);
