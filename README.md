@@ -34,7 +34,7 @@
 
 ## Overview
 
-![screenshot](https://fedehub93.github.io/preview.jpg)
+![screenshot](https://fedehub93.github.io/checkout-page/preview.jpg)
 
 ### Built With
 

@@ -276,7 +276,7 @@ select,
   }
 
   &--success {
-    background-color: rgba(#27ae60, 0.5);
+    background-color: rgba(var(--color-green), 0.5);
     color: var(--color-white);
   }
 }
