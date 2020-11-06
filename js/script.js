@@ -15,6 +15,11 @@ for (let i = 0; i < cartProduct.length; i++) {
     .addEventListener("click", function () {
       addQuantity(i);
     });
+  cartProduct[i]
+    .querySelector(".cart__quantity-input")
+    .addEventListener("input", function () {
+      calcTotal();
+    });
 }
 
 const addQuantity = function (i) {
