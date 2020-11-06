@@ -18,119 +18,18 @@
     <h1 class="heading-1 u-mb-medium">Checkout</h1>
     <div class="checkout">
       <div class="checkout__info">
-        <div class="checkout__info-contact">
-          <h2 class="heading-2 u-mb-xsmall">Contact information</h2>
-          <div class="input-group">
-            <label for="email" class="input-group__label">E-mail</label>
-            <input
-              type="email"
-              class="input-group__text"
-              placeholder="Enter your email..."
-              name="email"
-              id="email"
-            />
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 24 24"
-              class="input-group__icon"
-            >
-              <path d="M0 0h24v24H0z" fill="none" />
-              <path
-                d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"
-              />
-            </svg>
-          </div>
-          <div class="input-group">
-            <label for="phone" class="input-group__label">Phone</label>
-            <input
-              type="text"
-              class="input-group__text"
-              placeholder="Enter your phone..."
-              name="phone"
-              id="phone"
-            />
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 24 24"
-              class="input-group__icon"
-            >
-              <path d="M0 0h24v24H0z" fill="none" />
-              <path
-                d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56-.35-.12-.74-.03-1.01.24l-1.57 1.97c-2.83-1.35-5.48-3.9-6.89-6.83l1.95-1.66c.27-.28.35-.67.24-1.02-.37-1.11-.56-2.3-.56-3.53 0-.54-.45-.99-.99-.99H4.19C3.65 3 3 3.24 3 3.99 3 13.28 10.73 21 20.01 21c.71 0 .99-.63.99-1.18v-3.45c0-.54-.45-.99-.99-.99z"
-              />
-            </svg>
-          </div>
-        </div>
-        <div class="checkout__info-shipping">
-          <h2 class="heading-2 u-mb-xsmall">Shipping address</h2>
-          <div class="input-group">
-            <label for="name" class="input-group__label">Full name</label>
-            <input
-              type="text"
-              class="input-group__text"
-              placeholder="Your name..."
-              name="name"
-              id="name"
-            />
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 24 24"
-              class="input-group__icon"
-            >
-              <path d="M0 0h24v24H0z" fill="none" />
-              <path
-                d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"
-              />
-            </svg>
-          </div>
-          <div class="input-group">
-            <label for="address" class="input-group__label">Address</label>
-            <input
-              type="text"
-              class="input-group__text"
-              placeholder="Your address..."
-              name="address"
-              id="address"
-            />
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 24 24"
-              class="input-group__icon"
-            >
-              <path d="M0 0h24v24H0z" fill="none" />
-              <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z" />
-            </svg>
-          </div>
-          <div class="input-group">
-            <label for="city" class="input-group__label">City</label>
-            <input
-              type="text"
-              class="input-group__text"
-              placeholder="Your city..."
-              name="city"
-              id="city"
-            />
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              enable-background="new 0 0 24 24"
-              viewBox="0 0 24 24"
-              class="input-group__icon"
-            >
-              <g><rect fill="none" height="24" width="24" /></g>
-              <g>
-                <path
-                  d="M17,11V3H7v4H3v14h8v-4h2v4h8V11H17z M7,19H5v-2h2V19z M7,15H5v-2h2V15z M7,11H5V9h2V11z M11,15H9v-2h2V15z M11,11H9V9h2 V11z M11,7H9V5h2V7z M15,15h-2v-2h2V15z M15,11h-2V9h2V11z M15,7h-2V5h2V7z M19,19h-2v-2h2V19z M19,15h-2v-2h2V15z"
-                />
-              </g>
-            </svg>
-          </div>
-          <div class="input-row">
+        <form action="#">
+          <div class="checkout__info-contact">
+            <h2 class="heading-2 u-mb-xsmall">Contact information</h2>
             <div class="input-group">
-              <label for="country" class="input-group__label">Country</label>
-              <select name="country" id="country" class="input-group__select">
-                <option value="" disabled selected>Your country...</option>
-                <option value="Italy">Italy</option>
-              </select>
+              <label for="email" class="input-group__label">E-mail</label>
+              <input
+                type="email"
+                class="input-group__text"
+                placeholder="Enter your email..."
+                name="email"
+                id="email"
+              />
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
@@ -138,57 +37,169 @@
               >
                 <path d="M0 0h24v24H0z" fill="none" />
                 <path
-                  d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"
+                  d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"
                 />
               </svg>
             </div>
             <div class="input-group">
-              <label for="postalCode" class="input-group__label"
-                >Postal Code</label
-              >
+              <label for="phone" class="input-group__label">Phone</label>
               <input
-                type="number"
-                class="input-group__number"
-                placeholder="Your postal code..."
-                name="postalCode"
-                id="postalCode"
+                type="text"
+                class="input-group__text"
+                placeholder="Enter your phone..."
+                name="phone"
+                id="phone"
               />
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
                 class="input-group__icon"
               >
-                <path d="M-618-3000H782V600H-618zM0 0h24v24H0z" fill="none" />
+                <path d="M0 0h24v24H0z" fill="none" />
                 <path
-                  d="M20 6H10v6H8V4h6V0H6v6H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2z"
+                  d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56-.35-.12-.74-.03-1.01.24l-1.57 1.97c-2.83-1.35-5.48-3.9-6.89-6.83l1.95-1.66c.27-.28.35-.67.24-1.02-.37-1.11-.56-2.3-.56-3.53 0-.54-.45-.99-.99-.99H4.19C3.65 3 3 3.24 3 3.99 3 13.28 10.73 21 20.01 21c.71 0 .99-.63.99-1.18v-3.45c0-.54-.45-.99-.99-.99z"
                 />
               </svg>
             </div>
           </div>
-          <div class="input-group">
-            <label for="saveInfo" class="save-info">
-              <input type="checkbox" name="saveInfo" id="saveInfo" />
-              Save this information for the next time
-            </label>
+          <div class="checkout__info-shipping">
+            <h2 class="heading-2 u-mb-xsmall">Shipping address</h2>
+            <div class="input-group">
+              <label for="name" class="input-group__label">Full name</label>
+              <input
+                type="text"
+                class="input-group__text"
+                placeholder="Your name..."
+                name="name"
+                id="name"
+              />
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                class="input-group__icon"
+              >
+                <path d="M0 0h24v24H0z" fill="none" />
+                <path
+                  d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"
+                />
+              </svg>
+            </div>
+            <div class="input-group">
+              <label for="address" class="input-group__label">Address</label>
+              <input
+                type="text"
+                class="input-group__text"
+                placeholder="Your address..."
+                name="address"
+                id="address"
+              />
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                class="input-group__icon"
+              >
+                <path d="M0 0h24v24H0z" fill="none" />
+                <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z" />
+              </svg>
+            </div>
+            <div class="input-group">
+              <label for="city" class="input-group__label">City</label>
+              <input
+                type="text"
+                class="input-group__text"
+                placeholder="Your city..."
+                name="city"
+                id="city"
+              />
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                enable-background="new 0 0 24 24"
+                viewBox="0 0 24 24"
+                class="input-group__icon"
+              >
+                <g><rect fill="none" height="24" width="24" /></g>
+                <g>
+                  <path
+                    d="M17,11V3H7v4H3v14h8v-4h2v4h8V11H17z M7,19H5v-2h2V19z M7,15H5v-2h2V15z M7,11H5V9h2V11z M11,15H9v-2h2V15z M11,11H9V9h2 V11z M11,7H9V5h2V7z M15,15h-2v-2h2V15z M15,11h-2V9h2V11z M15,7h-2V5h2V7z M19,19h-2v-2h2V19z M19,15h-2v-2h2V15z"
+                  />
+                </g>
+              </svg>
+            </div>
+            <div class="input-row">
+              <div class="input-group">
+                <label for="country" class="input-group__label">Country</label>
+                <select name="country" id="country" class="input-group__select">
+                  <option value="" disabled selected>Your country...</option>
+                  <option value="Italy">Italy</option>
+                </select>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  class="input-group__icon"
+                >
+                  <path d="M0 0h24v24H0z" fill="none" />
+                  <path
+                    d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"
+                  />
+                </svg>
+              </div>
+              <div class="input-group">
+                <label for="postalCode" class="input-group__label"
+                  >Postal Code</label
+                >
+                <input
+                  type="number"
+                  class="input-group__number"
+                  placeholder="Your postal code..."
+                  name="postalCode"
+                  id="postalCode"
+                />
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  class="input-group__icon"
+                >
+                  <path d="M-618-3000H782V600H-618zM0 0h24v24H0z" fill="none" />
+                  <path
+                    d="M20 6H10v6H8V4h6V0H6v6H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2z"
+                  />
+                </svg>
+              </div>
+            </div>
+            <div class="input-group">
+              <label for="saveInfo" class="save-info">
+                <input type="checkbox" name="saveInfo" id="saveInfo" />
+                Save this information for the next time
+              </label>
+            </div>
+            <div class="input-row u-flex-row-reverse">
+              <button class="btn btn--orange" type="submit">Continue</button>
+            </div>
           </div>
-          <div class="input-row u-flex-row-reverse">
-            <button class="btn btn--orange">Continue</button>
-          </div>
-        </div>
+        </form>
       </div>
       <div class="checkout__cart">
         <div class="cart">
           <div class="cart__product">
             <img src="img/photo1.png" alt="Product 1" class="cart__img" />
             <h3 class="cart__name">Vintage Backbag</h3>
-            <div class="cart__price">
-              <span class="cart__price cart__price--discounted">$<span class="value">54.99</span></span>
-              <span class="cart__price cart__price--total">$<span class="value">94.99</span></span>
+            <div class="cart__price-box">
+              <span class="cart__price cart__price--discounted"
+                >$<span class="value">54.99</span></span
+              >
+              <span class="cart__price cart__price--total"
+                >$<span class="value">94.99</span></span
+              >
             </div>
             <div class="cart__quantity-box">
               <span class="btn-quantity btn-quantity--minus">&minus;</span>
               <!-- <span class="cart__quantity">1</span> -->
-              <input type="number" class="cart__quantity-input" min="0" value="1">
+              <input
+                type="number"
+                class="cart__quantity-input"
+                min="0"
+                value="1"
+              />
               <span class="btn-quantity btn-quantity--plus">&plus;</span>
             </div>
           </div>
@@ -196,13 +207,22 @@
             <img src="img/photo2.png" alt="Product 2" class="cart__img" />
             <h3 class="cart__name">Levi Shoes</h3>
             <div class="cart__price-box">
-              <span class="cart__price cart__price--discounted">$<span class="value">74.99</span></span>
-              <span class="cart__price cart__price--total">$<span class="value">124.99</span></span>
+              <span class="cart__price cart__price--discounted"
+                >$<span class="value">74.99</span></span
+              >
+              <span class="cart__price cart__price--total"
+                >$<span class="value">124.99</span></span
+              >
             </div>
             <div class="cart__quantity-box">
               <span class="btn-quantity btn-quantity--minus">&minus;</span>
               <!-- <span class="cart__quantity">1</span> -->
-              <input type="number" class="cart__quantity-input" min="0" value="1">
+              <input
+                type="number"
+                class="cart__quantity-input"
+                min="0"
+                value="1"
+              />
               <span class="btn-quantity btn-quantity--plus">&plus;</span>
             </div>
           </div>
@@ -210,12 +230,16 @@
             <hr class="u-mb-xsmall" />
             <div class="cart__summary-shipping">
               <span class="cart__summary-name">Shipping</span>
-              <span class="cart__summary-price">$<span class="value">19</span></span>
+              <span class="cart__summary-price"
+                >$<span class="value">19</span></span
+              >
             </div>
             <hr class="u-mb-xsmall" />
             <div class="cart__summary-total">
               <span class="cart__summary-name">Total</span>
-              <span class="cart__summary-price">$<span class="value">148.98</span></span>
+              <span class="cart__summary-price"
+                >$<span class="value">148.98</span></span
+              >
             </div>
           </div>
         </div>

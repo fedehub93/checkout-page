@@ -14,7 +14,6 @@
 
 select,
 ::placeholder {
-  @extend %montserrat-600;
   font-size: 1.6rem;
   color: var(--color-gray-1);
 }
@@ -29,7 +28,6 @@ select,
   input[type="email"],
   input[type="number"],
   select {
-    @extend %montserrat-600;
     font-size: 1.6rem;
     padding: 2rem 0 2rem 6rem;
     border-radius: 1.5rem;
@@ -37,6 +35,10 @@ select,
     height: 60px;
     border: 1px solid var(--color-gray-1);
     outline: none;
+
+    @media only screen and (max-width: $media-screen-xsmall) {
+      padding-left: 4.5rem;
+    }
   }
 
   input:focus + .input-group__icon,
@@ -45,7 +47,6 @@ select,
   }
 
   &__label {
-    @extend %montserrat-600;
     font-size: 1.2rem;
     color: var(--color-gray-2);
     display: block;
@@ -60,6 +61,9 @@ select,
     width: 3rem;
     fill: var(--color-gray-1);
     border-radius: 1rem;
+    @media only screen and (max-width: $media-screen-small) {
+      top: 4.5rem;
+    }
   }
 }
 
@@ -79,14 +83,14 @@ select,
 }
 
 .save-info {
-  @extend %montserrat-600;
   font-size: 1.2rem;
   color: var(--color-gray-4);
 }
 
 //BUTTON
 .btn {
-  @extend %montserrat-600;
+  font-family: inherit;
+  font-weight: inherit;
   display: block;
   font-size: 1.6rem;
   color: var(--color-white);
@@ -102,7 +106,6 @@ select,
 }
 
 .btn-quantity {
-  @extend %montserrat-600;
   font-size: 1.6rem;
   display: block;
   padding: 0.5rem 1rem;
@@ -115,6 +118,7 @@ select,
 //CART
 
 .cart {
+  max-width: 100%;
   padding: 2rem 2rem 2rem 2rem;
   background-color: var(--color-gray-5);
   border-radius: 1.5rem;
@@ -126,11 +130,11 @@ select,
     &:nth-last-child(2) {
       margin-bottom: 10rem;
     }
-
+    max-width: 100%;
     padding-right: 4rem;
 
     display: grid;
-    grid-template-columns: max-content minmax(max-content, 50%);
+    grid-template-columns: max-content minmax(min-content, 50%);
     grid-template-rows: max-content 1fr max-content;
     column-gap: 2rem;
   }
@@ -143,19 +147,19 @@ select,
   }
 
   &__name {
-    @extend %montserrat-600;
     font-size: 1.6rem;
     color: var(--color-gray-2);
     margin-bottom: 0.5rem;
   }
 
   &__price-box {
+    max-width: 100%;
+    margin-bottom: auto;
     display: flex;
     align-items: center;
   }
 
   &__price {
-    @extend %montserrat-600;
     &:not(:last-child) {
       margin-right: 2rem;
     }
@@ -175,7 +179,8 @@ select,
     padding: 1rem;
     border: 1px solid var(--color-gray-1);
     border-radius: 1.5rem;
-    width: 15rem;
+    max-width: 100%;
+
 
     display: flex;
     justify-content: space-between;
@@ -183,13 +188,11 @@ select,
   }
 
   &__quantity {
-    @extend %montserrat-600;
     font-size: 1.6rem;
     color: var(--color-gray-3);
   }
 
   &__quantity-input {
-    @extend %montserrat-600;
     text-align: center;
     font-size: 1.6rem;
     color: var(--color-gray-3);
@@ -211,12 +214,10 @@ select,
     }
 
     &-name {
-      @extend %montserrat-600;
       font-size: 1.8rem;
     }
 
     &-price {
-      @extend %montserrat-600;
       font-size: 1.4rem;
     }
   }
