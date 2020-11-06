@@ -18,7 +18,7 @@
     <h1 class="heading-1 u-mb-medium">Checkout</h1>
     <div class="checkout">
       <div class="checkout__info">
-        <form action="#">
+        <form  class="form-checkout" >
           <div class="checkout__info-contact">
             <h2 class="heading-2 u-mb-xsmall">Contact information</h2>
             <div class="input-group">
@@ -29,6 +29,7 @@
                 placeholder="Enter your email..."
                 name="email"
                 id="email"
+                required
               />
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -72,6 +73,7 @@
                 placeholder="Your name..."
                 name="name"
                 id="name"
+                required
               />
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -92,6 +94,7 @@
                 placeholder="Your address..."
                 name="address"
                 id="address"
+                required
               />
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -110,6 +113,7 @@
                 placeholder="Your city..."
                 name="city"
                 id="city"
+                required
               />
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -128,9 +132,12 @@
             <div class="input-row">
               <div class="input-group">
                 <label for="country" class="input-group__label">Country</label>
-                <select name="country" id="country" class="input-group__select">
+                <select name="country" id="country" class="input-group__select" multiple>
                   <option value="" disabled selected>Your country...</option>
                   <option value="Italy">Italy</option>
+                  <option value="Italy">France</option>
+                  <option value="Italy">German</option>
+                  <option value="Italy">Spain</option>
                 </select>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -172,7 +179,11 @@
                 Save this information for the next time
               </label>
             </div>
-            <div class="input-row u-flex-row-reverse">
+            <div class="input-row u-flex-space-between">
+              <div class="alert alert--success">
+                <div class="alert__close">X</div>
+                Successful!
+              </div>
               <button class="btn btn--orange" type="submit">Continue</button>
             </div>
           </div>

@@ -1,7 +1,7 @@
 .checkout {
     display: grid;
-    grid-template-columns: minmax(max-content, 60%) 1fr;
-    column-gap: 8rem;
+    grid-template-columns: minmax(max-content, 55%) 1fr;
+    column-gap: 6rem;
 
     @media only screen and (max-width: $media-screen-big) {
         grid-template-columns: 1fr 1fr;
